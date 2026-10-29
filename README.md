@@ -1,4 +1,4 @@
-# pan_parse.py
+# panos_parse.py
 
 Extracts the **objects** and **rulebases** from a Palo Alto Networks PAN-OS firewall or Panorama XML
 configuration into CSV files, preserving rule numbers, descriptions, tags and every other rule attribute.
@@ -33,13 +33,13 @@ Companion scripts with the same output conventions: `asa_parse.py` (Cisco ASA) a
 
 ```bash
 # Smoke test using the built-in sample config (no input file needed)
-python pan_parse.py --selftest
+python panos_parse.py --selftest
 
 # Real run
-python pan_parse.py running-config.xml
+python panos_parse.py running-config.xml
 
 # Real run with the one-row-per-source/destination/application/service CSV, failing on unresolved references
-python pan_parse.py running-config.xml --expand --strict
+python panos_parse.py running-config.xml --expand --strict
 ```
 
 Each run creates `output/<YYYY-MM-DD_HH-MM-SS>/` in the current working directory and prints its path.
@@ -82,7 +82,7 @@ One device (`devices/entry`) per file is assumed. See [Limitations](#11-limitati
 ## 3. Command-line options
 
 ```
-python pan_parse.py [config] [-o OUTDIR] [--expand] [--max-expand N] [--strict]
+python panos_parse.py [config] [-o OUTDIR] [--expand] [--max-expand N] [--strict]
                     [--csv-nl-sep STR] [--selftest]
 ```
 

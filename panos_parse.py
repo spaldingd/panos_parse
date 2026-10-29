@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-pan_parse.py - Extract objects and rulebases from a Palo Alto Networks PAN-OS / Panorama
+panos_parse.py - Extract objects and rulebases from a Palo Alto Networks PAN-OS / Panorama
 XML configuration and write them to CSV.
 
 Standard library only (Python 3.8+).
 
 Usage:
-    python pan_parse.py config.xml [-o output] [--expand] [--max-expand N] [--strict]
+    python panos_parse.py config.xml [-o output] [--expand] [--max-expand N] [--strict]
                         [--csv-nl-sep STR]
-    python pan_parse.py --selftest          # run against the embedded sample config
+    python panos_parse.py --selftest          # run against the embedded sample config
 
 Each run writes to <output>/<YYYY-MM-DD_HH-MM-SS>/ (a new folder per run; add "output/" to
 .gitignore):
